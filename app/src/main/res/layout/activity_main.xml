@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,10 +9,87 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.hugoe.petagram.MainActivity">
+    tools:context="com.hugoe.petagram.MainActivity"
+    android:background="@color/fondo">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/MiSFIrefresh"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heig">
+
+            <ListView
+                android:id="@+id/miLista"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heig"></ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MiSFIrefresh"
+            android:text="@string/texto_titulo" />
+
+        <Button
+            android:id="@+id/miBoton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitulo"
+            android:text="@string/texto_boton"
+            android:theme="@style/MiBotonRaised" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/miFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/miBoton"
+            android:src="@drawable/star" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/miCardView"
+            android:layout_width="@dimen/card_medida"
+            android:layout_height="@dimen/card_medida"
+            android:layout_below="@+id/miFAB"
+            card_view:cardCornerRadius="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/miImagen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scorp" />
+
+                <TextView
+                    android:id="@+id/tvTituloCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/miImagen"
+                    android:text="@string/tv_titulo_card"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/card_titulo"/>
+
+                <TextView
+                    android:id="@+id/tvDescripcionCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_descripcion_card"
+                    android:layout_below="@+id/tvTituloCard"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

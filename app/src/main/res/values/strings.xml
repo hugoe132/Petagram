@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Petagram</string>
+    <string name="texto_boton">Click</string>
+    <string name="texto_titulo">Hola Mundo!</string>
+    <string name="mensaje">Favorito</string>
+    <string name="texto_accion">Accion</string>
+    <string-array name="planetas">
+        <item>Mercurio</item>
+        <item>Venus</item>
+        <item>Tierra</item>
+        <item>Marte</item>
+        <item>Jupiter</item>
+        <item>Saturno</item>
+        <item>Urano</item>
+        <item>Neptuno</item>
+        <item>Pluton</item>
+    </string-array>
+
+    <string name="tv_titulo_card">SCORPIONS</string>
+    <string name="tv_descripcion_card">Best hard rock band</string>
 </resources>
