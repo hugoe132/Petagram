@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         miLista = (ListView) findViewById(R.id.miLista);
         String[] planetas = getResources().getStringArray(R.array.planetas);
         miLista.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, planetas));
-
         MiSFIrefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
